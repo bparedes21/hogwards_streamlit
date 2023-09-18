@@ -7,7 +7,7 @@ url = 'https://api-hogwarts.vercel.app/coin?coin='
 
 start_date = datetime.date(year=1950,month=1,day=1)
 end_date = datetime.datetime.now().date()
-d = st.date_input("When's your birthday", end_date)
+d = st.date_input("When's your birthday", min_value=start_date,max_value= end_date)
 st.write('Your birthday is:', d)
 
 url +=str(end_date)
