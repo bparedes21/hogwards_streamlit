@@ -4,7 +4,7 @@ import datetime
 
 url = 'https://api-hogwarts.vercel.app/coin?coin='
 
-today = datetime.date.now()
+today = datetime.now()
 st.write('Your birthday is:', today)
 
 url +=str(today)
