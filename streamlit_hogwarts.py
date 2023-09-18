@@ -7,7 +7,7 @@ url = 'https://api-hogwarts.vercel.app/coin?coin='
 today = datetime.datetime.now()
 st.write('Your birthday is:', today)
 
-url +=str(d)
+url +=str(today)
 x = requests.post(url)
 
 
