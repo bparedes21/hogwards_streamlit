@@ -1,4 +1,5 @@
 import requests
+import streamlit as st
 url = 'https://api-hogwarts.vercel.app/coin?coin='
 url += "{'coin': 'somevalue'}"
 x = requests.post(url)
