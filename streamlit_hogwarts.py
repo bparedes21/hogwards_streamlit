@@ -14,6 +14,26 @@ st.write(var)
 url +=str(d)
 response= requests.post(url)
 
+
 response_dict = json.loads(response.text)
 num_casa=response_dict["CASA"]
-st.title(num_casa)
+
+if(num_casa==1)or(num_casa==5)or(num_casa==9):
+    Casa_ho="Gryffindor"
+    significado_casa="Valentía, coraje y determinación."
+elif(num_casa==2)or(num_casa==6):
+    Casa_ho="Hufflepuff"
+    significado_casa="Lealtad, paciencia y trabajo duro."
+elif(num_casa==3)or(num_casa==7):
+    Casa_ho="Ravenclaw"
+    significado_casa="Inteligencia, sabiduría y creatividad. Asociados a los números"
+elif(num_casa==4)or(num_casa==8):
+    Casa_ho="Slytherin"
+    significado_casa="Astucia, ambición y determinación."
+    
+
+st.title("El resultado de la suma de la fecha de nacimiento es: ",num_casa)
+
+st.title("La casa correspondiente es: ",Casa_ho)
+
+st.title("La casa representa: ",significado_casa)
