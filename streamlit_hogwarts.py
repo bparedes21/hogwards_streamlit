@@ -2,7 +2,7 @@ import requests
 import streamlit as st
 import datetime
 
-url = 'https://api-hogwarts.vercel.app/coin?coin='
+url = 'https://api-hogwarts.vercel.app/CasaHogward?fecha='
 
 
 start_date = datetime.date(year=1950,month=1,day=1)
