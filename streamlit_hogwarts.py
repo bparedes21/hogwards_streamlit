@@ -17,7 +17,9 @@ response= requests.post(url)
 
 
 response_dict = json.loads(response.text)
-num_casa=response_dict["CASA"]
+num_casa=int(response_dict["CASA"])
+
+
 image = Image.open('harry-potter-broom-png.png')
 st.image(image, caption='Sunrise by the mountains')
 if(num_casa==1)or(num_casa==5)or(num_casa==9):
