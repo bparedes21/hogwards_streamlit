@@ -16,8 +16,10 @@ url +=str(d)
 response= requests.post(url)
 
 num_casa=0
+response_dict=0
 response_dict = json.loads(response.text)
-num_casa=int(response_dict["CASA"])
+if(response_dict!=0):
+    num_casa=int(response_dict["CASA"])
 
 
 image = Image.open('harry-potter-broom-png.png')
