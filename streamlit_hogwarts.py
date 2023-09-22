@@ -18,7 +18,7 @@ response= requests.post(url)
 
 response_dict = json.loads(response.text)
 num_casa=response_dict["CASA"]
-image = Image.open('hogwards_streamlit\harry-potter-broom-png.png')
+image = Image.open('harry-potter-broom-png.png')
 if(num_casa==1)or(num_casa==5)or(num_casa==9):
     Casa_ho="Gryffindor"
 
