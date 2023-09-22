@@ -24,7 +24,7 @@ try:
 except ValueError as error:
     
     image = Image.open('harry-potter-broom-png.png')
-    image_new=image.resize((400, 600))
+    image_new=image.resize((200,450 ))
     st.image(image_new, caption='Sunrise by the mountains')
 
 
