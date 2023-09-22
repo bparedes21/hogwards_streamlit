@@ -15,13 +15,14 @@ st.write(var)
 url +=str(d)
 response= requests.post(url)
 
-
+num_casa=0
 response_dict = json.loads(response.text)
 num_casa=int(response_dict["CASA"])
 
 
 image = Image.open('harry-potter-broom-png.png')
 st.image(image, caption='Sunrise by the mountains')
+
 if(num_casa==1)or(num_casa==5)or(num_casa==9):
     Casa_ho="Gryffindor"
 
@@ -38,10 +39,10 @@ elif(num_casa==3)or(num_casa==7):
 elif(num_casa==4)or(num_casa==8):
     Casa_ho="Slytherin"
     significado_casa="Astucia, ambición y determinación."
-    
+if(num_casa!=0):
+    num_casa=str(num_casa)
+    st.title("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
 
-st.title("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
-
-st.title("La casa correspondiente es: "+Casa_ho)
-#https://gist.github.com/rxaviers/7360908
-st.title("La casa representa: "+significado_casa)
+    st.title("La casa correspondiente es: "+Casa_ho)
+    #https://gist.github.com/rxaviers/7360908
+    st.title("La casa representa: "+significado_casa)
