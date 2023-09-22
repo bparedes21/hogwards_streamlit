@@ -24,13 +24,14 @@ try:
 except ValueError as error:
     
     image = Image.open('harry-potter-broom-png.png')
-    st.image(image, caption='Sunrise by the mountains')
+    image_new=image.resize((600, 400))
+    st.image(image_new, caption='Sunrise by the mountains')
 
 
 if(num_casa==1)or(num_casa==5)or(num_casa==9):
     Casa_ho="Gryffindor"
 
-    significado_casa="Valentía, coraje y determinación."
+    significado_casa="Valentía, coraje y determinación"
     
 
     
