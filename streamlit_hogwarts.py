@@ -1,3 +1,4 @@
+from os import error
 import requests
 import streamlit as st
 import datetime
@@ -17,13 +18,14 @@ response= requests.post(url)
 
 num_casa=0
 response_dict=0
-response_dict = json.loads(response.text)
-if(response_dict!=0):
+try:
+    response_dict = json.loads(response.text)
     num_casa=int(response_dict["CASA"])
+except ValueError as error:
+    
+    image = Image.open('harry-potter-broom-png.png')
+    st.image(image, caption='Sunrise by the mountains')
 
-
-image = Image.open('harry-potter-broom-png.png')
-st.image(image, caption='Sunrise by the mountains')
 
 if(num_casa==1)or(num_casa==5)or(num_casa==9):
     Casa_ho="Gryffindor"
