@@ -33,7 +33,7 @@ except ValueError as error:
 
 if(num_casa==1)or(num_casa==5)or(num_casa==9):
     image = Image.open('gry.png')
-    image_new=image.resize((250,400))
+    image_new=image.resize((350,400))
     st.image(image_new, caption='Gryffindor')
     Casa_ho="Gryffindor"
 
@@ -41,21 +41,21 @@ if(num_casa==1)or(num_casa==5)or(num_casa==9):
     
 elif(num_casa==2)or(num_casa==6):
     image = Image.open("hu.png")
-    image_new=image.resize((250,400))
+    image_new=image.resize((350,400))
     st.image(image_new, caption='Hufflepuff')
 
     Casa_ho="Hufflepuff"
     significado_casa="Lealtad, paciencia y trabajo duro."
 elif(num_casa==3)or(num_casa==7):
     image = Image.open("ra.png")
-    image_new=image.resize((250,400))
+    image_new=image.resize((350,400))
     st.image(image_new, caption='Ravenclaw')
 
     Casa_ho="Ravenclaw"
     significado_casa="Inteligencia, sabiduría y creatividad. Asociados a los números"
 elif(num_casa==4)or(num_casa==8):
     image = Image.open("sly.png")
-    image_new=image.resize((250,400))
+    image_new=image.resize((350,400))
     st.image(image_new, caption='Slytherin')
     Casa_ho="Slytherin"
     significado_casa="Astucia, ambición y determinación."
