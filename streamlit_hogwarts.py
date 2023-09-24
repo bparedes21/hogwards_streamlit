@@ -13,7 +13,7 @@ end_date = datetime.datetime.now().date()
 d = st.date_input("When's your birthday", min_value=start_date,max_value= end_date,value=None)
 if (d!=None):
     var='La feccha elegida es: '+str(d)
-st.write(var)
+    st.write(var)
 ##enlace + fecha de para el post
 url +=str(d)
 response= requests.post(url)
