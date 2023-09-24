@@ -48,7 +48,7 @@ elif(num_casa==2)or(num_casa==6):
     significado_casa="Lealtad, paciencia y trabajo duro."
 elif(num_casa==3)or(num_casa==7):
     image = Image.open("ra.png")
-    image_new=image.resize(250,400)
+    image_new=image.resize((250,400))
     st.image(image_new, caption='Ravenclaw')
 
     Casa_ho="Ravenclaw"
