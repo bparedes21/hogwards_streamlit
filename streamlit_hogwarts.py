@@ -9,8 +9,10 @@ url = 'https://api-hogwarts.vercel.app/CasaHogward?fecha='
 
 start_date = datetime.date(year=1950,month=1,day=1)
 end_date = datetime.datetime.now().date()
+
 d = st.date_input("When's your birthday", min_value=start_date,max_value= end_date,value=None)
-var='La feccha elegida es: '+str(d)
+if (d!=None):
+    var='La feccha elegida es: '+str(d)
 st.write(var)
 ##enlace + fecha de para el post
 url +=str(d)
@@ -21,6 +23,7 @@ response_dict=0
 try:
     response_dict = json.loads(response.text)
     num_casa=int(response_dict["CASA"])
+
 except ValueError as error:
     
     image = Image.open('harry-potter-broom-png.png')
