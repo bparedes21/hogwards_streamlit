@@ -59,8 +59,8 @@ elif(num_casa==4)or(num_casa==8):
 
 if(num_casa!=0):
     num_casa=str(num_casa)
-    st.title("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
+    st.header("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
 
-    st.title("La casa correspondiente es: "+Casa_ho)
+    st.header("La casa correspondiente es: "+Casa_ho)
     #https://gist.github.com/rxaviers/7360908
-    st.title("La casa representa: "+significado_casa)
+    st.header("La casa representa: "+significado_casa)
