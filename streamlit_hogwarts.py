@@ -23,6 +23,7 @@ response_dict=0
 try:
     response_dict = json.loads(response.text)
     num_casa=int(response_dict["CASA"])
+    boton_escudo=st.button('Mostrar escudo')
 
 except ValueError as error:
     
@@ -32,9 +33,8 @@ except ValueError as error:
 
 
 
-if st.button('Mostrar escudo'):
+if boton_escudo:
    
-
 
     if(num_casa==1)or(num_casa==5)or(num_casa==9):
         image = Image.open('gry.png')
