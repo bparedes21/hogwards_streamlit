@@ -9,6 +9,7 @@ url = 'https://api-hogwarts.vercel.app/CasaHogward?fecha='
 
 start_date = datetime.date(year=1950,month=1,day=1)
 end_date = datetime.datetime.now().date()
+st.header("Enterate a que casa de HOGWARTS perteneces :european_castle:")
 
 d = st.date_input("Ingresa tu fecha de nacimiento :baby:", min_value=start_date,max_value= end_date,value=None)
 if (d!=None):
@@ -32,7 +33,7 @@ try:
 
     with col2:
         boton_escudo=st.button('Mostrar escudo ')
-        boton_significado=st.button('Mostrar significado :eyeglasses:')
+        boton_significado=st.button('Mostrar significado ')
 
     with col3:
         st.write(' ')
@@ -80,10 +81,15 @@ if boton_escudo:
 
 if boton_significado:
     boton_escudo=False
-    with col2:
+    with col1:
         num_casa=str(num_casa)
-        st.header("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
-
-        st.header("La casa correspondiente es: "+Casa_ho)
+        st.header("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
+    with col2:
+        
+        st.header("La casa correspondiente es: :zap:"+Casa_ho)
         #https://gist.github.com/rxaviers/7360908
-        st.header("La casa representa: "+significado_casa)
+      
+    with col3:
+        st.header("La casa representa: :sparkler:"+significado_casa)
+        
+       
