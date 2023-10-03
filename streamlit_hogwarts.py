@@ -18,6 +18,7 @@ if (d!=None):
 url +=str(d)
 response= requests.post(url)
 boton_escudo=False
+boton_significado=False
 num_casa=0
 response_dict=0
 try:
@@ -65,11 +66,12 @@ if boton_escudo:
         Casa_ho="Slytherin"
         significado_casa="Astucia, ambición y determinación."
         
+    if boton_significado:
+        boton_escudo=False
+        if(num_casa!=0):
+            num_casa=str(num_casa)
+            st.header("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
 
-    if(num_casa!=0):
-        num_casa=str(num_casa)
-        st.header("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
-
-        st.header("La casa correspondiente es: "+Casa_ho)
-        #https://gist.github.com/rxaviers/7360908
-        st.header("La casa representa: "+significado_casa)
+            st.header("La casa correspondiente es: "+Casa_ho)
+            #https://gist.github.com/rxaviers/7360908
+            st.header("La casa representa: "+significado_casa)
