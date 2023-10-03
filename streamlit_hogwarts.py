@@ -25,6 +25,7 @@ try:
     response_dict = json.loads(response.text)
     num_casa=int(response_dict["CASA"])
     boton_escudo=st.button('Mostrar escudo')
+    boton_significado=st.button('Mostrar significado')
 
 except ValueError as error:
     
