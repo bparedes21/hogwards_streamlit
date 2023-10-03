@@ -10,9 +10,9 @@ url = 'https://api-hogwarts.vercel.app/CasaHogward?fecha='
 start_date = datetime.date(year=1950,month=1,day=1)
 end_date = datetime.datetime.now().date()
 
-d = st.date_input("When's your birthday", min_value=start_date,max_value= end_date,value=None)
+d = st.date_input("Ingresa tu fecha de nacimiento :baby:", min_value=start_date,max_value= end_date,value=None)
 if (d!=None):
-    var='La feccha elegida es: '+str(d)
+    var='La fecha elegida es: '+str(d)
     st.write(var)
 ##enlace + fecha de para el post
 url +=str(d)
@@ -31,8 +31,8 @@ try:
         st.write(' ')
 
     with col2:
-        boton_escudo=st.button('Mostrar escudo')
-        boton_significado=st.button('Mostrar significado')
+        boton_escudo=st.button('Mostrar escudo ')
+        boton_significado=st.button('Mostrar significado :eyeglasses:')
 
     with col3:
         st.write(' ')
@@ -73,15 +73,17 @@ elif(num_casa==4)or(num_casa==8):
     significado_casa="Astucia, ambición y determinación."
 
 if boton_escudo:
-    image_new=image.resize((350,400))
-    st.image(image_new, caption=caption_var)
+    with col2:
+        
+        image_new=image.resize((350,400))
+        st.image(image_new, caption=caption_var)
 
 if boton_significado:
     boton_escudo=False
-    
-    num_casa=str(num_casa)
-    st.header("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
+    with col2:
+        num_casa=str(num_casa)
+        st.header("El resultado de la suma de la fecha de nacimiento es: "+num_casa)
 
-    st.header("La casa correspondiente es: "+Casa_ho)
-    #https://gist.github.com/rxaviers/7360908
-    st.header("La casa representa: "+significado_casa)
+        st.header("La casa correspondiente es: "+Casa_ho)
+        #https://gist.github.com/rxaviers/7360908
+        st.header("La casa representa: "+significado_casa)
