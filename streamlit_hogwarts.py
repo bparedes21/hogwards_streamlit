@@ -17,7 +17,7 @@ if (d!=None):
 ##enlace + fecha de para el post
 url +=str(d)
 response= requests.post(url)
-
+boton_escudo=False
 num_casa=0
 response_dict=0
 try:
