@@ -24,9 +24,18 @@ response_dict=0
 try:
     response_dict = json.loads(response.text)
     num_casa=int(response_dict["CASA"])
-    boton_escudo=st.button('Mostrar escudo')
-    boton_significado=st.button('Mostrar significado')
 
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.write(' ')
+
+    with col2:
+        boton_escudo=st.button('Mostrar escudo')
+        boton_significado=st.button('Mostrar significado')
+
+    with col3:
+        st.write(' ')
 except ValueError as error:
     
     image = Image.open('harry-potter-broom-png.png')
