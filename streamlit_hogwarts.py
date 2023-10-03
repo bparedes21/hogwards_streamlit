@@ -27,6 +27,7 @@ try:
     num_casa=int(response_dict["CASA"])
 
     col1, col2, col3 = st.columns(3)
+    col4, col5, col6 = st.columns(3)
 
     with col1:
         st.write(' ')
@@ -81,15 +82,15 @@ if boton_escudo:
 
 if boton_significado:
     boton_escudo=False
-    with col1:
+    with col4:
         num_casa=str(num_casa)
         st.header("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
-    with col2:
+    with col5:
         
-        st.header("La casa correspondiente es: :zap:"+Casa_ho)
+        st.header("La casa correspondiente es :zap:"+Casa_ho)
         #https://gist.github.com/rxaviers/7360908
       
-    with col3:
-        st.header("La casa representa: :sparkler:"+significado_casa)
+    with col6:
+        st.header("La casa representa :sparkler:"+significado_casa)
         
        
