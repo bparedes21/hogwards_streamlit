@@ -79,14 +79,17 @@ elif(num_casa==4)or(num_casa==8):
     Casa_ho="Slytherin"
     significado_casa="Astucia, ambición y determinación."
     color_text="green"
-num_casa=str(num_casa)
-st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
+
 if boton_escudo:
     with col2:
        
         
         image_new=image.resize((350,400))
         st.image(image_new, caption=caption_var)
+else:
+    with col2:
+        num_casa=str(num_casa)
+        st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
 
 if boton_significado:
     boton_escudo=False
