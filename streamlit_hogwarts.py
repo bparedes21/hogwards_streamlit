@@ -94,13 +94,13 @@ elif(num_casa==4)or(num_casa==8):
 if boton_significado:
     boton_escudo=False
     with col2:
-        st.write("La casa correspondiente es ✨ :")
+        st.write("La casa de HOGWARTS es ✨ :")
         st.caption(":"+color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
         
     
-        st.write("La casa representa 🎇:")
+        st.write(":"+color_text+"["+Casa_ho+"] representa 🎇:")
         st.caption(":"+color_text+"["+significado_casa+"]")    
 
         
