@@ -12,9 +12,7 @@ end_date = datetime.datetime.now().date()
 st.header("Enterate a que casa de HOGWARTS perteneces :european_castle:")
 
 d = st.date_input("Ingresa tu fecha de nacimiento :baby:", min_value=start_date,max_value= end_date,value=None)
-if (d!=None):
-    var='La fecha elegida es: '+str(d)
-    st.write(var)
+
     
 ##enlace + fecha de para el post
 url +=str(d)
@@ -79,15 +77,17 @@ elif(num_casa==4)or(num_casa==8):
     Casa_ho="Slytherin"
     significado_casa="Astucia, ambición y determinación."
     color_text="green"
-
-if boton_escudo:
-    with col2:
-       
-        image_new=image.resize((350,400))
-        st.image(image_new, caption=caption_var)
-        num_casa=str(num_casa)
-        st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses::")
-        st.caption(num_casa)
+if (d!=None):
+    var='La fecha elegida es: '+str(d)
+    st.write(var)
+    if boton_escudo:
+        with col2:
+        
+            image_new=image.resize((350,400))
+            st.image(image_new, caption=caption_var)
+            num_casa=str(num_casa)
+            st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses::")
+            st.caption(":"+color_text+"["+num_casa+"]")
 
 if boton_significado:
     boton_escudo=False
