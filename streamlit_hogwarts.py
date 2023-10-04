@@ -45,12 +45,13 @@ except ValueError as error:
     st.image(image_new, caption='HP')
 
 if(num_casa==1)or(num_casa==5)or(num_casa==9):
-        image = Image.open('gry.png')
-       
-        scaption_var='Gryffindor'
-        Casa_ho="Gryffindor"
+    image = Image.open('gry.png')
+    
+    scaption_var='Gryffindor'
+    Casa_ho="Gryffindor"
 
-        significado_casa="Valentía, coraje y determinación"
+    significado_casa="Valentía, coraje y determinación"
+    color_text="red"
         
 elif(num_casa==2)or(num_casa==6):
     image = Image.open("hu.png")
@@ -58,6 +59,7 @@ elif(num_casa==2)or(num_casa==6):
 
     Casa_ho="Hufflepuff"
     significado_casa="Lealtad, paciencia y trabajo duro."
+    color_text="gray"
 
 elif(num_casa==3)or(num_casa==7):
     image = Image.open("ra.png")
@@ -66,6 +68,8 @@ elif(num_casa==3)or(num_casa==7):
 
     Casa_ho="Ravenclaw"
     significado_casa="Inteligencia, sabiduría y creatividad. Asociados a los números"
+    color_text="blue"
+
 elif(num_casa==4)or(num_casa==8):
     image = Image.open("sly.png")
     caption_var='Slytherin'
@@ -73,6 +77,7 @@ elif(num_casa==4)or(num_casa==8):
     
     Casa_ho="Slytherin"
     significado_casa="Astucia, ambición y determinación."
+    color_text="green"
 
 if boton_escudo:
     with col2:
@@ -87,9 +92,9 @@ if boton_significado:
         st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
     with col5:
         
-        st.caption("La casa correspondiente es ✨"+Casa_ho)
+        st.caption("La casa correspondiente es ✨ :+"color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
-        st.caption("La casa representa 🎇"+significado_casa)
+        st.caption("La casa representa 🎇:+"color_text+"["+significado_casa+"]")
         
        
