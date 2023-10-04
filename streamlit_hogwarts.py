@@ -48,7 +48,7 @@ except ValueError as error:
 if(num_casa==1)or(num_casa==5)or(num_casa==9):
     image = Image.open('gry.png')
     
-    scaption_var='Gryffindor'
+    caption_var='Gryffindor'
     Casa_ho="Gryffindor"
 
     significado_casa="Valentía, coraje y determinación"
