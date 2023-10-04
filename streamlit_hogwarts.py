@@ -79,6 +79,7 @@ elif(num_casa==4)or(num_casa==8):
     Casa_ho="Slytherin"
     significado_casa="Astucia, ambición y determinación."
     color_text="green"
+
 st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
 if boton_escudo:
     with col2:
@@ -91,13 +92,13 @@ if boton_significado:
     boton_escudo=False
     with col4:
         st.write("La casa correspondiente es ✨ :")
-        st.caption(color_text+"["+Casa_ho+"]")
+        st.caption(":"+color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
         
     with col5:
         st.write("La casa representa 🎇:")
-        st.caption(color_text+"["+significado_casa+"]")    
+        st.caption(":"+color_text+"["+significado_casa+"]")    
 
         
        
