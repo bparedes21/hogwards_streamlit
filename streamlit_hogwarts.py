@@ -15,6 +15,7 @@ d = st.date_input("Ingresa tu fecha de nacimiento :baby:", min_value=start_date,
 if (d!=None):
     var='La fecha elegida es: '+str(d)
     st.write(var)
+    
 ##enlace + fecha de para el post
 url +=str(d)
 response= requests.post(url)
@@ -78,23 +79,25 @@ elif(num_casa==4)or(num_casa==8):
     Casa_ho="Slytherin"
     significado_casa="Astucia, ambición y determinación."
     color_text="green"
-
+st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
 if boton_escudo:
     with col2:
         num_casa=str(num_casa)
-        st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
+        
         image_new=image.resize((350,400))
         st.image(image_new, caption=caption_var)
 
 if boton_significado:
     boton_escudo=False
     with col4:
-        st.caption("La casa correspondiente es ✨ :"+color_text+"["+Casa_ho+"]")
+        st.write("La casa correspondiente es ✨ :")
+        st.caption(color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
         
     with col5:
-        st.caption("La casa representa 🎇:"+color_text+"["+significado_casa+"]")    
+        st.write("La casa representa 🎇:)
+        st.caption(color_text+"["+significado_casa+"]")    
 
         
        
