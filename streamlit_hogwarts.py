@@ -96,7 +96,7 @@ if boton_significado:
       
         
     with col5:
-        st.write("La casa representa 🎇:)
+        st.write("La casa representa 🎇:")
         st.caption(color_text+"["+significado_casa+"]")    
 
         
