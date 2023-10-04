@@ -86,17 +86,18 @@ if boton_escudo:
         image_new=image.resize((350,400))
         st.image(image_new, caption=caption_var)
         num_casa=str(num_casa)
-        st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
+        st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses::")
+        st.caption(num_casa)
 
 if boton_significado:
     boton_escudo=False
-    with col4:
+    with col2:
         st.write("La casa correspondiente es ✨ :")
         st.caption(":"+color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
         
-    with col5:
+    
         st.write("La casa representa 🎇:")
         st.caption(":"+color_text+"["+significado_casa+"]")    
 
