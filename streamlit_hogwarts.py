@@ -27,7 +27,7 @@ try:
     num_casa=int(response_dict["CASA"])
 
     col1, col2, col3 = st.columns(3)
-    col4, col5 = st.columns([1,3])
+    col4, col5 = st.columns(1,2)
 
     with col1:
         st.write(' ')
@@ -81,20 +81,20 @@ elif(num_casa==4)or(num_casa==8):
 
 if boton_escudo:
     with col2:
-        
+        num_casa=str(num_casa)
+        st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
         image_new=image.resize((350,400))
         st.image(image_new, caption=caption_var)
 
 if boton_significado:
     boton_escudo=False
     with col4:
-        num_casa=str(num_casa)
-        st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
-    with col5:
-        
         st.caption("La casa correspondiente es ✨ :"+color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
-        st.caption("La casa representa 🎇:"+color_text+"["+significado_casa+"]")
+        
+    with col5:
+        st.caption("La casa representa 🎇:"+color_text+"["+significado_casa+"]")    
+
         
        
