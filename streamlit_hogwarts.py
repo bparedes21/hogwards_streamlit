@@ -84,12 +84,12 @@ if boton_significado:
     boton_escudo=False
     with col4:
         num_casa=str(num_casa)
-        st.header("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
+        st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
     with col5:
         
-        st.header("La casa correspondiente es ✨"+Casa_ho)
+        st.caption("La casa correspondiente es ✨"+Casa_ho)
         #https://gist.github.com/rxaviers/7360908
       
-        st.header("La casa representa 🎇"+significado_casa)
+        st.caption("La casa representa 🎇"+significado_casa)
         
        
