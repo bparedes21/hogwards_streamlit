@@ -81,6 +81,7 @@ if (d!=None):
     with col2:
         var='La fecha elegida es: '+str(d)
         st.write(var)
+        num_casa=str(num_casa)
         st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses::")
         st.caption(":"+color_text+"["+num_casa+"]")
   
@@ -89,7 +90,7 @@ if (d!=None):
         
             image_new=image.resize((350,400))
             st.image(image_new, caption=caption_var)
-            num_casa=str(num_casa)
+            
 
 
 if boton_significado:
