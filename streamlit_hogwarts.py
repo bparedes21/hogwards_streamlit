@@ -27,7 +27,7 @@ try:
     num_casa=int(response_dict["CASA"])
 
     col1, col2, col3 = st.columns(3)
-    col4, col5 = st.columns(1,3)
+    col4, col5 = st.columns([1,3])
 
     with col1:
         st.write(' ')
