@@ -77,20 +77,22 @@ elif(num_casa==4)or(num_casa==8):
     Casa_ho="Slytherin"
     significado_casa="Astucia, ambición y determinación."
     color_text="green"
-if (d!=None):
-    with col2:
-        var='La fecha elegida es: '+str(d)
-        st.write(var)
-        num_casa=str(num_casa)
-        st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses::")
-        st.caption(":"+color_text+"["+num_casa+"]")
+
   
     if boton_escudo:
         with col2:
         
             image_new=image.resize((350,400))
             st.image(image_new, caption=caption_var)
-            
+    else:
+        if (d!=None):
+            with col2:
+                var='La fecha elegida es: '+str(d)
+                st.write(var)
+                num_casa=str(num_casa)
+                st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses::")
+            with col2:
+                st.caption(":"+color_text+"["+num_casa+"]")
 
 
 if boton_significado:
