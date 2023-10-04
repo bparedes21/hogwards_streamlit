@@ -92,9 +92,9 @@ if boton_significado:
         st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses:: "+num_casa)
     with col5:
         
-        st.caption("La casa correspondiente es ✨ :+"color_text+"["+Casa_ho+"]")
+        st.caption("La casa correspondiente es ✨ :"+color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
-        st.caption("La casa representa 🎇:+"color_text+"["+significado_casa+"]")
+        st.caption("La casa representa 🎇:"+color_text+"["+significado_casa+"]")
         
        
