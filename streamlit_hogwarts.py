@@ -90,9 +90,6 @@ elif(num_casa==4)or(num_casa==8):
             st.write(var)
             num_casa=str(num_casa)
             st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses: :"+color_text+"["+num_casa+"]")
-       
-            st.caption()
-
 
 if boton_significado:
     boton_escudo=False
