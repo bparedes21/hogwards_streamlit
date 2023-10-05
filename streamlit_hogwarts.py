@@ -25,14 +25,14 @@ num_casa=0
 response_dict=0
 try:
     response_dict = json.loads(response.text)
-    house_ho=response_dict["CASA"]
+    Casa_ho=response_dict["CASA"]
     House_propertie=response_dict["caracteristicas"]
     image_name=response_dict["nombre_img"]
     
     color_text=response_dict["color_font"]
-
-    caption_var=house_ho
-    Casa_ho=str(house_ho)
+    numero_result=response_dict["color_font"]
+    caption_var=Casa_ho
+  
 
     significado_casa=House_propertie
    
@@ -73,8 +73,8 @@ if boton_escudo:
     
         var='La fecha elegida es: '+str(d)
         st.write(var)
-        num_casa=str(num_casa)
-        st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses: :"+color_text+"["+num_casa+"]")
+        
+        st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses: :"+color_text+"["+numero_result+"]")
 
 if boton_significado:
     boton_escudo=False
