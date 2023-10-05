@@ -45,6 +45,7 @@ try:
 
     col1, col2, col3 = st.columns(3)
     col4, col5 = st.columns(2)
+    col6=st.columns(1)
 
     with col1:
         st.write(' ')
@@ -78,12 +79,13 @@ if boton_escudo:
 
 if boton_significado:
     boton_escudo=False
-    st.title("La casa de HOGWARTS es ✨ :")
-    with col2:
+    with col6:  
+        st.title("La casa de HOGWARTS es ✨ :")
+        with col2:
+            
+            st.subheader(":"+color_text+"["+Casa_ho+"]")
+            #https://gist.github.com/rxaviers/7360908
         
-        st.subheader(":"+color_text+"["+Casa_ho+"]")
-        #https://gist.github.com/rxaviers/7360908
-    
-    st.title(":"+color_text+"["+Casa_ho+"] representa 🎇:")
-    with col2:
-        st.subheader(":"+color_text+"["+significado_casa+"]")    
+        st.title(":"+color_text+"["+Casa_ho+"] representa 🎇:")
+        with col2:
+            st.subheader(":"+color_text+"["+significado_casa+"]")    
