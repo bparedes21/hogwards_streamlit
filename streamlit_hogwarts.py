@@ -4,8 +4,10 @@ import streamlit as st
 import datetime
 import json
 from PIL import Image
-url = 'https://api-hogwarts.vercel.app/CasaHogward?fecha='
+from io import BytesIO
 
+url = 'https://api-hogwarts.vercel.app/CasaHogward?fecha='
+url_casa="https://api-hogwarts.vercel.app/CasaHogward?fecha="
 
 start_date = datetime.date(year=1950,month=1,day=1)
 end_date = datetime.datetime.now().date()
@@ -23,7 +25,17 @@ num_casa=0
 response_dict=0
 try:
     response_dict = json.loads(response.text)
-    num_casa=int(response_dict["CASA"])
+    house_ho=response_dict["CASA"]
+    House_propertie=response_dict["caracteristicas"]
+    image=response_dict["nombre_img"]
+    color_font=response_dict["color_font"]
+
+    caption_var=house_ho
+    Casa_ho=house_ho
+
+    significado_casa=House_propertie
+    color_text=color_font
+
 
     col1, col2, col3 = st.columns(3)
     col4, col5 = st.columns(2)
@@ -39,45 +51,20 @@ try:
         st.write(' ')
 except ValueError as error:
     
-    image = Image.open('harry-potter-broom-png.png')
+    url_harry="https://api-hogwarts.vercel.app/img_harry/"
+    r = requests.get(url_harry,stream=True)
+    image = Image.open(BytesIO(r.content))
     image_new=image.resize((400,400))
+
     st.image(image_new, caption='HP')
 
-if(num_casa==1)or(num_casa==5)or(num_casa==9):
-    image = Image.open('gry.png')
+    url1="https://api-hogwarts.vercel.app/img_casa?casa_=sly.png"
+    r = requests.post(url1,stream=True)
+    img = Image.open(BytesIO(r.content))
     
-    caption_var='Gryffindor'
-    Casa_ho="Gryffindor"
-
-    significado_casa="Valentía, coraje y determinación"
-    color_text="red"
+    
+  
         
-elif(num_casa==2)or(num_casa==6):
-    image = Image.open("hu.png")
-    caption_var='Hufflepuff'
-
-    Casa_ho="Hufflepuff"
-    significado_casa="Lealtad, paciencia y trabajo duro."
-    color_text="gray"
-
-elif(num_casa==3)or(num_casa==7):
-    image = Image.open("ra.png")
-    
-    caption_var='Ravenclaw'
-
-    Casa_ho="Ravenclaw"
-    significado_casa="Inteligencia, sabiduría y creatividad. Asociados a los números"
-    color_text="blue"
-
-elif(num_casa==4)or(num_casa==8):
-    image = Image.open("sly.png")
-    caption_var='Slytherin'
-    
-    
-    Casa_ho="Slytherin"
-    significado_casa="Astucia, ambición y determinación."
-    color_text="green"
-
   
     if boton_escudo:
         with col2:
@@ -103,5 +90,5 @@ if boton_significado:
         st.write(":"+color_text+"["+Casa_ho+"] representa 🎇:")
         st.caption(":"+color_text+"["+significado_casa+"]")    
 
-        
+"""        
        
