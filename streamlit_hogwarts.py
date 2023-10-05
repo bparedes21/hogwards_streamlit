@@ -82,5 +82,5 @@ if boton_significado:
         st.title("La casa de HOGWARTS es ✨ :")
     
     with col2:
-        st.title(":"+color_text+"["+Casa_ho+"] representa 🎇:")
+        st.title(":"+color_text+"["+Casa_ho+"] Representa 🎇:")
         st.subheader(":"+color_text+"["+significado_casa+"]")    
