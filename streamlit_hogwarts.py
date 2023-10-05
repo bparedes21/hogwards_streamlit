@@ -85,5 +85,5 @@ if boton_significado:
       
         
     
-        st.write(":"+color_text+"["+Casa_ho+"] representa 🎇:")
+        st.title(":"+color_text+"["+Casa_ho+"] representa 🎇:")
         st.subheader(":"+color_text+"["+significado_casa+"]")    
