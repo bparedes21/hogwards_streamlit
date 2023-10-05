@@ -32,7 +32,7 @@ try:
     color_text=response_dict["color_font"]
 
     caption_var=house_ho
-    Casa_ho=house_ho
+    Casa_ho=str(house_ho)
 
     significado_casa=House_propertie
    
