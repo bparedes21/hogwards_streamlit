@@ -72,14 +72,14 @@ if boton_escudo:
 
     
         var='La fecha elegida es: '+str(d)
-        st.title(var)
+        st.write(var)
         num_casa=str(num_casa)
-        st.header("El resultado de la suma de la fecha de nacimiento es :eyeglasses: :"+color_text+"["+num_casa+"]")
+        st.caption("El resultado de la suma de la fecha de nacimiento es :eyeglasses: :"+color_text+"["+num_casa+"]")
 
 if boton_significado:
     boton_escudo=False
     with col2:
-        st.write("La casa de HOGWARTS es ✨ :")
+        st.title("La casa de HOGWARTS es ✨ :")
         st.subheader(":"+color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
