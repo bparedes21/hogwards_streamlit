@@ -29,13 +29,13 @@ try:
     House_propertie=response_dict["caracteristicas"]
     image_name=response_dict["nombre_img"]
     
-    color_font=response_dict["color_font"]
+    color_text=response_dict["color_font"]
 
     caption_var=house_ho
     Casa_ho=house_ho
 
     significado_casa=House_propertie
-    color_text=color_font
+   
     
     url1="https://api-hogwarts.vercel.app/img_casa?casa_="+image_name
     r = requests.post(url1,stream=True)
@@ -80,10 +80,10 @@ if boton_significado:
     boton_escudo=False
     with col2:
         st.write("La casa de HOGWARTS es ✨ :")
-        st.caption(":"+color_text+"["+Casa_ho+"]")
+        st.subheader(":"+color_text+"["+Casa_ho+"]")
         #https://gist.github.com/rxaviers/7360908
       
         
     
         st.write(":"+color_text+"["+Casa_ho+"] representa 🎇:")
-        st.caption(":"+color_text+"["+significado_casa+"]")    
+        st.caption(significado_casa)    
