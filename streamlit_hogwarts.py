@@ -27,7 +27,7 @@ try:
     response_dict = json.loads(response.text)
     house_ho=response_dict["CASA"]
     House_propertie=response_dict["caracteristicas"]
-    image=response_dict["nombre_img"]
+    image_name=response_dict["nombre_img"]
     color_font=response_dict["color_font"]
 
     caption_var=house_ho
@@ -35,7 +35,12 @@ try:
 
     significado_casa=House_propertie
     color_text=color_font
+    
 
+    url1="https://api-hogwarts.vercel.app/img_casa?casa_="+image_name
+    r = requests.post(url1,stream=True)
+    image = Image.open(BytesIO(r.content))
+    
 
     col1, col2, col3 = st.columns(3)
     col4, col5 = st.columns(2)
@@ -55,17 +60,8 @@ except ValueError as error:
     r = requests.get(url_harry,stream=True)
     image = Image.open(BytesIO(r.content))
     image_new=image.resize((400,400))
-
     st.image(image_new, caption='HP')
-
-    url1="https://api-hogwarts.vercel.app/img_casa?casa_=sly.png"
-    r = requests.post(url1,stream=True)
-    img = Image.open(BytesIO(r.content))
-    
-    
-  
-        
-  
+ 
     if boton_escudo:
         with col2:
         
@@ -89,6 +85,3 @@ if boton_significado:
     
         st.write(":"+color_text+"["+Casa_ho+"] representa 🎇:")
         st.caption(":"+color_text+"["+significado_casa+"]")    
-
-"""        
-       
