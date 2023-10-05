@@ -80,9 +80,6 @@ if boton_significado:
     boton_escudo=False
     with col2:
         st.title("La casa de HOGWARTS es ✨ :")
-        st.subheader(":"+color_text+"["+Casa_ho+"]")
-        #https://gist.github.com/rxaviers/7360908
-    
     
     with col2:
         st.title(":"+color_text+"["+Casa_ho+"] representa 🎇:")
