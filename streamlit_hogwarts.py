@@ -72,9 +72,9 @@ if boton_escudo:
 
     
         var='La fecha elegida es: '+str(d)
-        st.write(var)
+        st.title(var)
         num_casa=str(num_casa)
-        st.write("El resultado de la suma de la fecha de nacimiento es :eyeglasses: :"+color_text+"["+num_casa+"]")
+        st.header("El resultado de la suma de la fecha de nacimiento es :eyeglasses: :"+color_text+"["+num_casa+"]")
 
 if boton_significado:
     boton_escudo=False
@@ -86,4 +86,4 @@ if boton_significado:
         
     
         st.write(":"+color_text+"["+Casa_ho+"] representa 🎇:")
-        st.caption(significado_casa)    
+        st.subheader(":"+color_text+"["+significado_casa+"]")    
