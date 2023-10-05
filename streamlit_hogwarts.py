@@ -30,7 +30,7 @@ try:
     image_name=response_dict["nombre_img"]
     
     color_text=response_dict["color_font"]
-    numero_result=response_dict["color_font"]
+    numero_result=response_dict["numero_result"]
     caption_var=Casa_ho
   
 
