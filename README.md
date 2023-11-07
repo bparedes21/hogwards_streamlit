@@ -20,6 +20,8 @@ Casa segun suma de los numeros de tu fecha de nacimiento:
 
 </br>
 
+******************************************************************************
+
 | Casa | Numeros |  Significado |
 | --- | --- |
 | Gryffindor     | 1 , 5 , 9| Valentía, coraje y determinación. |
