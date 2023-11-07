@@ -23,7 +23,7 @@ Casa segun suma de los numeros de tu fecha de nacimiento:
 ******************************************************************************
 
 | Casa | Numeros |  Significado |
-| --- | --- |
+| --- | --- | --- |
 | Gryffindor     | 1 , 5 , 9| Valentía, coraje y determinación. |
 | Hufflepuff     | 2 , 6 | Lealtad, paciencia y trabajo duro. |
 | Ravenclaw     | 3 , 7 | Inteligencia, sabiduría y creatividad. | 
