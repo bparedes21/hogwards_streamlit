@@ -6,10 +6,11 @@
 # [:zap: A que casa de Hogwarts perteneces? :dizzy:](#)
   
 <a href="https://github.com/404"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="20%"></a>
-</div>
 
-<div>
-<H1 style="color: green" href="https://apphogwartspy-dn6wk469sncu5qrhfxgmaj.streamlit.app/">Apreta aca para ir a ver!</H1>
+
+<H2 style="color:purple;" href="">Apreta aca para ir a ver! :point_down: </H2>
+
+[:neckbeard: Hogwarts](https://apphogwartspy-dn6wk469sncu5qrhfxgmaj.streamlit.app/) - Gryffindor | Hufflepuff | Ravenclaw | Slytherin
 </div>
 
 # Enterate de que casa sos!
