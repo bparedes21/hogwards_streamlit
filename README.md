@@ -31,6 +31,7 @@ Casa segun suma de los numeros de tu fecha de nacimiento:
 | Ravenclaw     | 3 , 7 | Inteligencia, sabiduría y creatividad. | 
 | Slytherin     | 4 , 8 | Astucia, ambición y determinación. | 
 
+</div>
 
  ## Table of Contents
 
@@ -44,6 +45,7 @@ Casa segun suma de los numeros de tu fecha de nacimiento:
 | 2 | [Setup](#setup)  | 
 
 </div>
+
  ## About
  
  La app la cree en Python lo que hace es consultar a una API que esta en otro repositorio privado el cual no se puede ver y es desde donde trae las imagenes y el resultado del calculo que realiza con la fecha. Espero que les guste
